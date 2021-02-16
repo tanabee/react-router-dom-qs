@@ -41,4 +41,4 @@ export default function App() {
 
 ## Sample code
 
-See example folder
+See [example folder](https://github.com/tanabee/react-router-dom-qs/tree/master/example)
