@@ -1,6 +1,6 @@
 {
   "name": "react-router-dom-qs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Parse query string variables as Object",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -26,8 +26,26 @@
     "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
     "@rollup/plugin-babel": "^5.2.3",
+    "husky": "^5.0.9",
+    "import-sort-style-react": "^5.1.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "prettier-plugin-import-sort": "^0.0.6",
     "rollup": "^2.39.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-peer-deps-external": "^2.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": ["eslint --max-warnings=0"]
+  },
+  "importSort": {
+    ".js, .jsx": {
+      "style": "react"
+    }
   }
 }
